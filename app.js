@@ -10,7 +10,7 @@ const flash=require('connect-flash')
 const mongodbConnection=require('./config/mongodb')
 const nocache=require('nocache')
 const cookieParser=require('cookie-parser')
-
+const helmet=require('helmet')
 
 // port number
 const port=process.env.PORT || 3000
@@ -23,6 +23,9 @@ app.use(flash())
 
 // nocache
 app.use(nocache())
+
+//
+app.use(helmet())
 
 
 // path setting
