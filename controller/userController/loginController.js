@@ -1,6 +1,7 @@
 const userSchema = require("../../model/userSchema");
 const bcrypt = require('bcrypt')
 const passport = require('passport')
+const validator = require('validator')
 require('../../service/auth')
 
 
@@ -30,6 +31,13 @@ const login = (req, res) => {
 
 const loginPost = async (req, res) => {
     try {
+
+        // input validation
+        if (!validator.isEmail(req.body.email)) {
+            req.flash('errorMessage', 'Invalid email format');
+            return res.redirect('/user/login');
+        }
+        
         const checkUser = await userSchema.findOne({ email: req.body.email })
         if (checkUser === null) {
             req.flash('errorMessage', 'Invalid username or password')
@@ -67,6 +75,13 @@ const register = (req, res) => {
 
 const registerPost = async (req, res) => {
     try {
+
+        // input validation
+        if (!validator.isEmail(req.body.email)) {
+            req.flash('errorMessage', 'Invalid email format');
+            return res.redirect('/user/register');
+        }
+
         const userData = {
             name: req.body.name,
             email: req.body.email,

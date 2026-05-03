@@ -1,4 +1,5 @@
 const dotenv=require('dotenv').config()
+const validator = require('validator')
 
 
 const admin=(req,res)=>{
