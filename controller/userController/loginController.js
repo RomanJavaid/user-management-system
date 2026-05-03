@@ -2,6 +2,7 @@ const userSchema = require("../../model/userSchema");
 const bcrypt = require('bcrypt')
 const passport = require('passport')
 const validator = require('validator')
+const jwt = require('jsonwebtoken')
 require('../../service/auth')
 
 
@@ -18,15 +19,26 @@ const user = (req, res) => {
 
 
 const login = (req, res) => {
-    try {
-        if (req.session.user) {
-            res.redirect('/user/home')
-        } else {
-            res.render('user/login', { title: "Login", alertMessage: req.flash('errorMessage') })
-        }
-    } catch (err) {
-        console.log(`Error on login page render ${err}`);
-    }
+//     try {
+//         if (req.session.user) {
+//             res.redirect('/user/home')
+//         } else {
+//             res.render('user/login', { title: "Login", alertMessage: req.flash('errorMessage') })
+//         }
+//     } catch (err) {
+//         console.log(`Error on login page render ${err}`);
+//     }
+// }
+
+try {
+    res.render('user/login', { 
+        title: "Login", 
+        alertMessage: req.flash('errorMessage') 
+    })
+} catch (err) {
+    console.log(`Error on login page render ${err}`);
+}
+
 }
 
 const loginPost = async (req, res) => {
@@ -46,7 +58,12 @@ const loginPost = async (req, res) => {
             const passwordCheck = await bcrypt.compare(req.body.password, checkUser.password)
 
             if (passwordCheck) {
-                req.session.user = checkUser
+                const token = jwt.sign(
+                    { id: checkUser._id, email: checkUser.email },
+                    "secretKey",
+                    { expiresIn: "1h" }
+                );
+                res.cookie("token", token)
                 return res.redirect('/user/home')
             } else {
                 req.flash('errorMessage', 'Invalid username or password')
@@ -147,13 +164,15 @@ const googleCallback = (req, res, next) => {
 
 
 const logout = (req, res) => {
-    req.session.destroy((err) => {
-        if (err) {
-            console.log(`Error during session logout`);
-        } else {
-            res.redirect('/user/login')
-        }
-    })
+    //req.session.destroy((err) => {
+        //if (err) {
+            //console.log(`Error during session logout`);
+        //} else {
+           // res.redirect('/user/login')
+        //}
+    //})
+    res.clearCookie("token");
+    res.redirect('/user/login');
 }
 
 
