@@ -11,6 +11,7 @@ const mongodbConnection=require('./config/mongodb')
 const nocache=require('nocache')
 const cookieParser=require('cookie-parser')
 const helmet=require('helmet')
+const xss=require('xss-clean')
 
 // port number
 const port=process.env.PORT || 3000
@@ -24,8 +25,11 @@ app.use(flash())
 // nocache
 app.use(nocache())
 
-//
+// helmet
 app.use(helmet())
+
+// xss-clean
+app.use(xss())
 
 
 // path setting

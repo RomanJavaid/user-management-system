@@ -93,7 +93,15 @@ const register = (req, res) => {
 const registerPost = async (req, res) => {
     try {
 
-        // input validation
+        //input validation name
+
+        if (!validator.isAlpha(req.body.name, 'en-US', { ignore: ' ' })) {
+            req.flash('errorMessage', 'Name must contain only letters');
+            return res.redirect('/user/register');
+        }
+
+
+        // input validation email
         if (!validator.isEmail(req.body.email)) {
             req.flash('errorMessage', 'Invalid email format');
             return res.redirect('/user/register');
