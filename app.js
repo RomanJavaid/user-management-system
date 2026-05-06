@@ -12,6 +12,7 @@ const nocache=require('nocache')
 const cookieParser=require('cookie-parser')
 const helmet=require('helmet')
 const xss=require('xss-clean')
+const logger = require('./service/logger')
 
 // port number
 const port=process.env.PORT || 3000
@@ -30,6 +31,9 @@ app.use(helmet())
 
 // xss-clean
 app.use(xss())
+
+// logger
+logger.info('Application started')
 
 
 // path setting

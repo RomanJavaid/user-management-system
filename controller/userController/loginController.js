@@ -1,11 +1,10 @@
 const userSchema = require("../../model/userSchema");
 const bcrypt = require('bcrypt')
 const passport = require('passport')
+const logger = require('../../service/logger')
 const validator = require('validator')
 const jwt = require('jsonwebtoken')
 require('../../service/auth')
-
-
 
 
 
@@ -52,6 +51,10 @@ const loginPost = async (req, res) => {
         
         const checkUser = await userSchema.findOne({ email: req.body.email })
         if (checkUser === null) {
+
+            //logger fail
+            logger.warn(`Login attempt with non-existing email: ${req.body.email}`);
+
             req.flash('errorMessage', 'Invalid username or password')
             res.redirect('/user/login')
         } else {
@@ -64,8 +67,15 @@ const loginPost = async (req, res) => {
                     { expiresIn: "1h" }
                 );
                 res.cookie("token", token)
+
+                //logger success
+                logger.info(`User logged in: ${req.body.email}`);
+
                 return res.redirect('/user/home')
             } else {
+                //logger fail
+                logger.warn(`Failed login attempt: ${req.body.email}`);
+
                 req.flash('errorMessage', 'Invalid username or password')
                 res.redirect('/user/login')
             }
@@ -179,6 +189,9 @@ const logout = (req, res) => {
            // res.redirect('/user/login')
         //}
     //})
+
+    logger.info(`User logged out`);
+
     res.clearCookie("token");
     res.redirect('/user/login');
 }

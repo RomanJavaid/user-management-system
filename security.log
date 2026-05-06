@@ -1,0 +1,21 @@
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user2@abc.com"}
+{"level":"info","message":"Application started"}
+{"level":"warn","message":"Login attempt with non-existing email: user@abc.com"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user2@abc.com"}
+{"level":"warn","message":"Login out: undefined"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user2@abc.com"}
+{"level":"warn","message":"Login out: undefined"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user2@abc.com"}
+{"level":"info","message":"User logged out: unknown user"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user2@abc.com"}
+{"level":"info","message":"User logged out"}
