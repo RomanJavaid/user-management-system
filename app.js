@@ -16,6 +16,15 @@ const logger = require('./service/logger')
 
 // rate limiter
 const rateLimit = require('express-rate-limit')
+// cors
+const cors = require('cors')
+
+// cors
+app.use(cors({
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+}))
 
 
 // port number
