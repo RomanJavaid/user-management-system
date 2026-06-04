@@ -14,6 +14,10 @@ const helmet=require('helmet')
 const xss=require('xss-clean')
 const logger = require('./service/logger')
 
+// rate limiter
+const rateLimit = require('express-rate-limit')
+
+
 // port number
 const port=process.env.PORT || 3000
 
@@ -26,6 +30,8 @@ app.use(flash())
 // nocache
 app.use(nocache())
 
+
+
 // helmet
 app.use(helmet())
 
@@ -36,6 +42,7 @@ app.use(xss())
 logger.info('Application started')
 
 
+
 // path setting
 app.use('/images',express.static(path.join(__dirname,'public','images')))
 app.use('/style',express.static(path.join(__dirname,'public','style')))
@@ -44,6 +51,16 @@ app.use(express.static(path.join(__dirname,'public')))
 // body parser
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
+
+// rate limiter
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100,
+    message: "Too many requests, please try again later."
+})
+
+// rate limiter
+app.use(limiter)
 
 // session
 app.use(session({

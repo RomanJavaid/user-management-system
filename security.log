@@ -19,3 +19,116 @@
 {"level":"info","message":"Application started"}
 {"level":"info","message":"User logged in: user2@abc.com"}
 {"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user2@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"warn","message":"Failed login attempt: user4@abc.com"}
+{"level":"info","message":"User logged in: user4@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"warn","message":"Failed login attempt: user5@abc.com"}
+{"level":"warn","message":"Failed login attempt: user4@abc.com"}
+{"level":"warn","message":"Failed login attempt: user4@abc.com"}
+{"level":"info","message":"User logged in: user4@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user4@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user5@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"warn","message":"Login attempt with non-existing email: user6@abc.com"}
+{"level":"info","message":"User logged in: user6@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user6@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"warn","message":"Failed login attempt: abc@zeta.com"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: zaproxy@example.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user6@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user6@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user5@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user6@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user5@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user6@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user6@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user5@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user6@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user6@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user6@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user6@abc.com"}
+{"level":"info","message":"User logged out"}
