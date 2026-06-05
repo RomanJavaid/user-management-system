@@ -152,3 +152,32 @@
 {"level":"info","message":"Application started"}
 {"level":"info","message":"Application started"}
 {"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user5@abc.com"}
+{"level":"info","message":"User logged in: user5@abc.com"}
+{"level":"info","message":"User logged in: user5@abc.com"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user5@abc.com"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged in: user5@abc.com"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user5@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user6@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user6@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user6@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user5@abc.com"}
+{"level":"info","message":"User logged out"}

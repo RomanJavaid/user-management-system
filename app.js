@@ -13,7 +13,7 @@ const cookieParser=require('cookie-parser')
 const helmet=require('helmet')
 const xss=require('xss-clean')
 const logger = require('./service/logger')
-
+const apiKeyAuth = require("./middleware/apiKeyAuth")
 // rate limiter
 const rateLimit = require('express-rate-limit')
 // cors
@@ -41,8 +41,29 @@ app.use(nocache())
 
 
 
-// helmet
-// app.use(helmet())
+// helmet csp
+ app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'"],
+        styleSrc: ["'self'", "'unsafe-inline'"],
+        imgSrc: ["'self'", "data:"],
+        connectSrc: ["'self'"]
+      }
+    }
+  })
+)
+
+// HSTS
+app.use(
+  helmet.hsts({
+    maxAge: 15552000, // 180 days
+    includeSubDomains: false,
+    preload: false
+  })
+)
 
 // xss-clean
 app.use(xss())
@@ -95,6 +116,10 @@ app.use('/admin',adminRouter)
 // first route
 app.get('/',(req,res)=>{
    res.redirect("/user/login")
+})
+
+app.get("/api/user-data", apiKeyAuth, (req, res) => {
+  res.json({ secure: true })
 })
 
 app.use("*",(req,res)=>{

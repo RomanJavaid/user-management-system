@@ -1,38 +1,39 @@
-const express=require('express')
 const userSchema = require('../model/userSchema')
-const user=express.Router()
-const auth=require('../middleware/auth')
 
-const rateLimit = require('express-rate-limit')
+const express = require("express")
+const rateLimit = require("express-rate-limit")
 
-const userLoginControl=require('../controller/userController/loginController')
-const userHomeControl=require('../controller/userController/homeController')
+const user = express.Router()
+
+const auth = require("../middleware/auth")
 const apiKeyAuth = require("../middleware/apiKeyAuth")
 
-user.get('/',userLoginControl.user)
-user.get('/login',userLoginControl.login)
+const userLoginControl = require("../controller/userController/loginController")
+const userHomeControl = require("../controller/userController/homeController")
 
 // login limiter
-
 const loginLimiter = rateLimit({
-    windowMs: 15 * 60 * 1000,
-    max: 5,
-    message: "Too many login attempts, try again later."
+  windowMs: 15 * 60 * 1000,
+  max: 5,
+  message: "Too many login attempts, try again later."
 })
 
-//user.post('/login',userLoginControl.loginPost)
-user.post('/login', loginLimiter, userLoginControl.loginPost)
+// public routes
+user.get("/", userLoginControl.user)
+user.get("/login", userLoginControl.login)
 
-user.get('/register',userLoginControl.register)
+user.post("/login", loginLimiter, userLoginControl.loginPost)
 
-user.post('/register',userLoginControl.registerPost)
+user.get("/register", userLoginControl.register)
+user.post("/register", userLoginControl.registerPost)
 
-user.get('/auth/google',userLoginControl.googleRender)
-user.get('/auth/google/callback',userLoginControl.googleCallback)
+user.get("/auth/google", userLoginControl.googleRender)
+user.get("/auth/google/callback", userLoginControl.googleCallback)
 
-// user.get('/home', auth, userHomeControl.home)
-user.get('/home', apiKeyAuth, auth, userHomeControl.home)
+// protected route
+user.get("/home", auth, userHomeControl.home)
 
-user.get('/logout',userLoginControl.logout)
+// logout
+user.get("/logout", userLoginControl.logout)
 
 module.exports=user
