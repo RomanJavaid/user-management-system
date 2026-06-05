@@ -42,7 +42,7 @@ app.use(nocache())
 
 
 // helmet
-app.use(helmet())
+// app.use(helmet())
 
 // xss-clean
 app.use(xss())
