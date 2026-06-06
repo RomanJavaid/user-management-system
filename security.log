@@ -181,3 +181,44 @@
 {"level":"info","message":"User logged out"}
 {"level":"info","message":"User logged in: user5@abc.com"}
 {"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user5@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user2@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user2@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user4@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user7@abc.com"}
+{"level":"info","message":"User logged in: user7@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"warn","message":"Login attempt with non-existing email: r@gmail.com"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user7@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user7@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user7@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user7@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"warn","message":"Login attempt with non-existing email: user7abc@gmail.com"}
+{"level":"warn","message":"Login attempt with non-existing email: user7@gmail.com"}
+{"level":"info","message":"User logged in: user7@abc.com"}
+{"level":"info","message":"User logged out"}

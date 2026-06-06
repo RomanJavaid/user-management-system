@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE items [
+<!ELEMENT items (item*)>
+<!ATTLIST items burpVersion CDATA "">
+<!ATTLIST items exportTime CDATA "">
+<!ELEMENT item (time, url, host, port, protocol, method, path, extension, request, status, responselength, mimetype, response, comment)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT url (#PCDATA)>
+<!ELEMENT host (#PCDATA)>
+<!ATTLIST host ip CDATA "">
+<!ELEMENT port (#PCDATA)>
+<!ELEMENT protocol (#PCDATA)>
+<!ELEMENT method (#PCDATA)>
+<!ELEMENT path (#PCDATA)>
+<!ELEMENT extension (#PCDATA)>
+<!ELEMENT request (#PCDATA)>
+<!ATTLIST request base64 (true|false) "false">
+<!ELEMENT status (#PCDATA)>
+<!ELEMENT responselength (#PCDATA)>
+<!ELEMENT mimetype (#PCDATA)>
+<!ELEMENT response (#PCDATA)>
+<!ATTLIST response base64 (true|false) "false">
+<!ELEMENT comment (#PCDATA)>
+]>
+<items burpVersion="2026.4.3" exportTime="Sat Jun 06 16:27:38 PKT 2026">
+  <item>
+    <time>Sat Jun 06 16:18:03 PKT 2026</time>
+    <url><![CDATA[http://127.0.0.1:3000/user/login]]></url>
+    <host ip="127.0.0.1">127.0.0.1</host>
+    <port>3000</port>
+    <protocol>http</protocol>
+    <method><![CDATA[POST]]></method>
+    <path><![CDATA[/user/login]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[UE9TVCAvdXNlci9sb2dpbiBIVFRQLzEuMQ0KSG9zdDogMTI3LjAuMC4xOjMwMDANCkNvbnRlbnQtTGVuZ3RoOiA0NQ0KQ2FjaGUtQ29udHJvbDogbWF4LWFnZT0wDQpzZWMtY2gtdWE6ICJOb3QtQS5CcmFuZCI7dj0iMjQiLCAiQ2hyb21pdW0iO3Y9IjE0NiINCnNlYy1jaC11YS1tb2JpbGU6ID8wDQpzZWMtY2gtdWEtcGxhdGZvcm06ICJXaW5kb3dzIg0KQWNjZXB0LUxhbmd1YWdlOiBlbi1VUyxlbjtxPTAuOQ0KT3JpZ2luOiBudWxsDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3gtd3d3LWZvcm0tdXJsZW5jb2RlZA0KVXBncmFkZS1JbnNlY3VyZS1SZXF1ZXN0czogMQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzE0Ni4wLjAuMCBTYWZhcmkvNTM3LjM2DQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LGltYWdlL2F2aWYsaW1hZ2Uvd2VicCxpbWFnZS9hcG5nLCovKjtxPTAuOCxhcHBsaWNhdGlvbi9zaWduZWQtZXhjaGFuZ2U7dj1iMztxPTAuNw0KU2VjLUZldGNoLVNpdGU6IHNhbWUtb3JpZ2luDQpTZWMtRmV0Y2gtTW9kZTogbmF2aWdhdGUNClNlYy1GZXRjaC1Vc2VyOiA/MQ0KU2VjLUZldGNoLURlc3Q6IGRvY3VtZW50DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUsIGJyDQpDb29raWU6IGNvbm5lY3Quc2lkPXMlM0FERjg4MjZlYVlDX1lYRG4wQ1hiTnMweVphdWR6cnlaVS56T0lnRUdCTHdTV2F4SHVieGIzNFVTT3NQVVAzYm5VTEt4TmIyZDlWUnVBDQpDb25uZWN0aW9uOiBrZWVwLWFsaXZlDQoNCmVtYWlsPXVzZXI3YWJjJTQwZ21haWwuY29tJnBhc3N3b3JkPXU3LmFiYyU0MA==]]></request>
+    <status>302</status>
+    <responselength>1189</responselength>
+    <mimetype>HTML</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMzAyIEZvdW5kDQpBY2Nlc3MtQ29udHJvbC1BbGxvdy1PcmlnaW46IGh0dHA6Ly9sb2NhbGhvc3Q6MzAwMA0KVmFyeTogT3JpZ2luLCBBY2NlcHQNCkFjY2Vzcy1Db250cm9sLUFsbG93LUNyZWRlbnRpYWxzOiB0cnVlDQpTdXJyb2dhdGUtQ29udHJvbDogbm8tc3RvcmUNCkNhY2hlLUNvbnRyb2w6IG5vLXN0b3JlLCBuby1jYWNoZSwgbXVzdC1yZXZhbGlkYXRlLCBwcm94eS1yZXZhbGlkYXRlDQpFeHBpcmVzOiAwDQpDb250ZW50LVNlY3VyaXR5LVBvbGljeTogZGVmYXVsdC1zcmMgJ3NlbGYnO3NjcmlwdC1zcmMgJ3NlbGYnO3N0eWxlLXNyYyAnc2VsZicgJ3Vuc2FmZS1pbmxpbmUnO2ltZy1zcmMgJ3NlbGYnIGRhdGE6O2Nvbm5lY3Qtc3JjICdzZWxmJztiYXNlLXVyaSAnc2VsZic7Zm9udC1zcmMgJ3NlbGYnIGh0dHBzOiBkYXRhOjtmb3JtLWFjdGlvbiAnc2VsZic7ZnJhbWUtYW5jZXN0b3JzICdzZWxmJztvYmplY3Qtc3JjICdub25lJztzY3JpcHQtc3JjLWF0dHIgJ25vbmUnO3VwZ3JhZGUtaW5zZWN1cmUtcmVxdWVzdHMNCkNyb3NzLU9yaWdpbi1PcGVuZXItUG9saWN5OiBzYW1lLW9yaWdpbg0KQ3Jvc3MtT3JpZ2luLVJlc291cmNlLVBvbGljeTogc2FtZS1vcmlnaW4NCk9yaWdpbi1BZ2VudC1DbHVzdGVyOiA/MQ0KUmVmZXJyZXItUG9saWN5OiBuby1yZWZlcnJlcg0KU3RyaWN0LVRyYW5zcG9ydC1TZWN1cml0eTogbWF4LWFnZT0xNTU1MjAwMA0KWC1Db250ZW50LVR5cGUtT3B0aW9uczogbm9zbmlmZg0KWC1ETlMtUHJlZmV0Y2gtQ29udHJvbDogb2ZmDQpYLURvd25sb2FkLU9wdGlvbnM6IG5vb3Blbg0KWC1GcmFtZS1PcHRpb25zOiBTQU1FT1JJR0lODQpYLVBlcm1pdHRlZC1Dcm9zcy1Eb21haW4tUG9saWNpZXM6IG5vbmUNClgtWFNTLVByb3RlY3Rpb246IDANClgtUmF0ZUxpbWl0LUxpbWl0OiA1DQpYLVJhdGVMaW1pdC1SZW1haW5pbmc6IDQNCkRhdGU6IFNhdCwgMDYgSnVuIDIwMjYgMTE6MTg6MDMgR01UDQpYLVJhdGVMaW1pdC1SZXNldDogMTc4MDc0NTU4NA0KTG9jYXRpb246IC91c2VyL2xvZ2luDQpDb250ZW50LVR5cGU6IHRleHQvaHRtbDsgY2hhcnNldD11dGYtOA0KQ29udGVudC1MZW5ndGg6IDQwDQpDb25uZWN0aW9uOiBrZWVwLWFsaXZlDQpLZWVwLUFsaXZlOiB0aW1lb3V0PTUNCg0KPHA+Rm91bmQuIFJlZGlyZWN0aW5nIHRvIC91c2VyL2xvZ2luPC9wPg==]]></response>
+    <comment></comment>
+  </item>
+</items>

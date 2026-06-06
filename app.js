@@ -1,3 +1,4 @@
+console.log("APP FILE LOADED");
 require('dotenv').config()
 const express=require('express')
 const app=express()
@@ -127,10 +128,16 @@ app.use("*",(req,res)=>{
 })
 
 
-app.listen(port,(err)=>{
-    if(err){
-        console.log(`Error during port listening ${err}`);
-    }else{
-        console.log(`Server running on http://localhost:${port}`);
-    }
-})
+// app.listen(port,(err)=>{
+//     if(err){
+//         console.log(`Error during port listening ${err}`);
+//     }else{
+//         console.log(`Server running on http://localhost:${port}`);
+//     }
+// })
+
+console.log("About to start server...");
+
+app.listen(port, "0.0.0.0", () => {
+    console.log(`Server running on http://localhost:${port}`);
+});
