@@ -21,16 +21,30 @@ This is a Node.js based User Management System with authentication and security 
 ---
 
 # Security Implemented
-- Passwords are securely hashed using bcrypt
-- JWT used for authentication
+- Secure password hashing using bcrypt
+- JWT-based authentication system
 - Route protection using authentication middleware
-- Input validation to prevent invalid data
-- Security headers added via Helmet (CSP & HSTS)
-- Cross-Origin Resource Sharing (CORS) configured
-- Rate limiting implemented to prevent brute-force login attempts
+- Input validation to prevent invalid and malicious data
+- Security headers implemented using Helmet (CSP, HSTS, etc.)
+- CORS configured to control cross-origin access
+- Rate limiting implemented to prevent brute-force attacks
 - XSS protection using xss-clean middleware
-- API Key Authentication for protected API endpoints
-- Separation of UI routes and secured API routes
+- API key based protection for secured routes
+- Separation of public UI routes and protected API routes
+
+---
+
+# Security Testing & Validation
+The application was tested for common web security vulnerabilities using industry-standard security tools.
+
+- Captured and analyzed HTTP requests using Burp Suite.
+- Performed automated security testing for injection vulnerabilities.
+- Verified login and authentication endpoints under attack simulation.
+- Observed application behavior under rate limiting conditions.
+- Confirmed secure handling of user inputs and authentication flow.
+
+## Result:
+No critical vulnerabilities were found. The application successfully passed basic security validation tests and demonstrates secure handling of authentication and user input.
 
 ---
 
