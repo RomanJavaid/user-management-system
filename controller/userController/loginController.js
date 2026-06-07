@@ -32,7 +32,8 @@ const login = (req, res) => {
 try {
     res.render('user/login', { 
         title: "Login", 
-        alertMessage: req.flash('errorMessage') 
+        alertMessage: req.flash('errorMessage'), 
+        csrfToken: req.csrfToken()
     })
 } catch (err) {
     console.log(`Error on login page render ${err}`);

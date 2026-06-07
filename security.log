@@ -222,3 +222,19 @@
 {"level":"warn","message":"Login attempt with non-existing email: user7@gmail.com"}
 {"level":"info","message":"User logged in: user7@abc.com"}
 {"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user7@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user4@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user4@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user7@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: user6@abc.com"}
+{"level":"info","message":"User logged out"}

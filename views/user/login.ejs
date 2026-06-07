@@ -36,6 +36,7 @@
 <div class="login-container">
     <form action="/user/login" method="post">
         <h2>Login</h2>
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
         <input type="email" name="email" placeholder="Username" required>
         <input type="password" name="password" placeholder="password" required>
         <button class="btn btn-primary" type="submit">Login</button>

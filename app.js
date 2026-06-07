@@ -79,9 +79,7 @@ app.use('/images',express.static(path.join(__dirname,'public','images')))
 app.use('/style',express.static(path.join(__dirname,'public','style')))
 app.use(express.static(path.join(__dirname,'public')))
 
-// body parser
-app.use(express.json())
-app.use(express.urlencoded({extended:true}))
+
 
 // rate limiter
 const limiter = rateLimit({
@@ -92,14 +90,38 @@ const limiter = rateLimit({
 // rate limiter
 app.use(limiter)
 
+app.use(cookieParser())
+
+// body parser
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
+
 // session
 app.use(session({
     secret:"your secret key",
     resave:false,
     saveUninitialized:true,
+    cookie: {
+        httpOnly: true
+    }
 }))
 
-app.use(cookieParser())
+//csrf
+const csrf = require('csurf');
+const csrfProtection = csrf({ cookie: false });
+
+app.use('/user', csrfProtection);
+
+app.use((req, res, next) => {
+    if (req.csrfToken) {
+        res.locals.csrfToken = req.csrfToken();
+    } else {
+        res.locals.csrfToken = "";
+    }
+    next();
+});
+
+
 
 // layouts
 app.use(expressLayouts);
