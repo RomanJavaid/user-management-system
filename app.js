@@ -2,6 +2,7 @@ console.log("APP FILE LOADED");
 require('dotenv').config()
 const express=require('express')
 const app=express()
+
 const session=require('express-session')
 const expressLayouts=require('express-ejs-layouts')
 const path=require('path')
@@ -17,6 +18,12 @@ const logger = require('./service/logger')
 const apiKeyAuth = require("./middleware/apiKeyAuth")
 // rate limiter
 const rateLimit = require('express-rate-limit')
+
+
+// security baseline
+app.disable("x-powered-by");
+app.set("etag", false);
+
 // cors
 const cors = require('cors')
 
@@ -106,7 +113,9 @@ app.use(session({
     resave:false,
     saveUninitialized:true,
     cookie: {
-        httpOnly: true
+        httpOnly: true,
+        secure: false,
+        sameSite: "strict"
     }
 }))
 

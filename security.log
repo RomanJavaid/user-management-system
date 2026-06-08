@@ -253,3 +253,25 @@
 {"level":"info","message":"Application started"}
 {"level":"info","message":"User logged in: user1@abc.com"}
 {"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: zaproxy@example.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"User logged in: zaproxy@example.com"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: zaproxy@example.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user1@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user4@abc.com"}
+{"level":"info","message":"User logged out"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"Application started"}
+{"level":"info","message":"User logged in: user4@abc.com"}
+{"level":"info","message":"User logged out"}
