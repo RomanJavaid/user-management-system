@@ -32,7 +32,7 @@ This is a Node.js based User Management System with authentication and security 
 - XSS protection using xss-clean middleware
 - API key based protection for secured routes
 - Separation of public UI routes and protected API routes
-- CSRF protection using token-based request validation
+- CSRF protection implemented using csurf middleware (user routes)
 
 ---
 
@@ -44,15 +44,25 @@ The application was tested for common web security vulnerabilities using industr
 - Verified login and authentication endpoints under attack simulation
 - Observed application behavior under rate limiting conditions
 - Confirmed secure handling of user inputs and authentication flow
+- CSRF token validation tested on protected routes
 - Tested CSRF protection by modifying and removing CSRF tokens from requests
 - Verified that invalid and missing CSRF tokens are rejected by the server
+- Security headers and HTTP responses analyzed using OWASP ZAP
+- Web application scanned for common vulnerabilities (OWASP Top 10 checks)
+- External security scanning performed using Nikto
+- System-level security audit performed using Lynis
+- Dependency vulnerabilities checked using npm audit
 
 ## Result:
+- Most critical security headers and protections are active and functional
 - CSRF-protected routes successfully rejected unauthorized requests
 - Invalid and modified CSRF tokens were blocked during testing
 - Authentication and authorization controls functioned as expected
 - No critical vulnerabilities were identified during security validation
 - Application demonstrated secure handling of user input and authentication workflows
+- No critical application-level vulnerabilities detected during testing
+- Some dependency-level warnings exist but are non-breaking and controlled
+- System-level audit (Lynis) shows standard hardening recommendations for development environments
 
 ---
 
