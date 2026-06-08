@@ -18,6 +18,7 @@ This is a Node.js based User Management System with authentication and security 
 - Rate Limiting for login protection
 - API Key secured endpoints (API layer security)
 - CSRF Protection using csurf middleware
+- Dockerized application for containerized deployment
 
 ---
 
@@ -66,10 +67,23 @@ The application was tested for common web security vulnerabilities using industr
 
 ---
 
+# Tools
+- Node.js & npm
+- Git & GitHub
+- PowerShell
+- WSL Ubuntu
+- Burp Suite
+- OWASP ZAP
+- Nikto
+- Lynis
+- npm audit
+- Docker
+- Docker Desktop
+
 # Tech Stack
 - Node.js
 - Express.js
-- MongoDB
+- MongoDB Atlas
 - EJS
 - JWT
 - bcrypt
