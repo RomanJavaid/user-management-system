@@ -2,7 +2,7 @@
 
 
 # Project Introduction
-This is a Node.js based User Management System with authentication and security features. It allows users to register and login securely with multiple layers of protection against common web vulnerabilities.
+This is a Node.js based User Management System with authentication and security features. It allows users to register and login securely with multiple layers of protection against common web vulnerabilities
 
 ---
 
@@ -17,6 +17,7 @@ This is a Node.js based User Management System with authentication and security 
 - Logout functionality
 - Rate Limiting for login protection
 - API Key secured endpoints (API layer security)
+- CSRF Protection using csurf middleware
 
 ---
 
@@ -31,20 +32,27 @@ This is a Node.js based User Management System with authentication and security 
 - XSS protection using xss-clean middleware
 - API key based protection for secured routes
 - Separation of public UI routes and protected API routes
+- CSRF protection using token-based request validation
 
 ---
 
 # Security Testing & Validation
-The application was tested for common web security vulnerabilities using industry-standard security tools.
+The application was tested for common web security vulnerabilities using industry-standard security tools
 
-- Captured and analyzed HTTP requests using Burp Suite.
-- Performed automated security testing for injection vulnerabilities.
-- Verified login and authentication endpoints under attack simulation.
-- Observed application behavior under rate limiting conditions.
-- Confirmed secure handling of user inputs and authentication flow.
+- Captured and analyzed HTTP requests using Burp Suite
+- Performed automated security testing for injection vulnerabilities
+- Verified login and authentication endpoints under attack simulation
+- Observed application behavior under rate limiting conditions
+- Confirmed secure handling of user inputs and authentication flow
+- Tested CSRF protection by modifying and removing CSRF tokens from requests
+- Verified that invalid and missing CSRF tokens are rejected by the server
 
 ## Result:
-No critical vulnerabilities were found. The application successfully passed basic security validation tests and demonstrates secure handling of authentication and user input.
+- CSRF-protected routes successfully rejected unauthorized requests
+- Invalid and modified CSRF tokens were blocked during testing
+- Authentication and authorization controls functioned as expected
+- No critical vulnerabilities were identified during security validation
+- Application demonstrated secure handling of user input and authentication workflows
 
 ---
 
