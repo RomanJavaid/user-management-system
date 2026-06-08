@@ -67,7 +67,14 @@ const loginPost = async (req, res) => {
                     "secretKey",
                     { expiresIn: "1h" }
                 );
-                res.cookie("token", token)
+                // res.cookie("token", token)
+                // cookie update
+                res.cookie("token", token, {
+                    httpOnly: true,
+                    secure: false, // production me true (HTTPS)
+                    sameSite: "strict",
+                    maxAge: 60 * 60 * 1000 // 1 hour
+                });
 
                 //logger success
                 logger.info(`User logged in: ${req.body.email}`);

@@ -48,10 +48,14 @@ app.use(nocache())
     contentSecurityPolicy: {
       directives: {
         defaultSrc: ["'self'"],
-        scriptSrc: ["'self'"],
-        styleSrc: ["'self'", "'unsafe-inline'"],
-        imgSrc: ["'self'", "data:"],
-        connectSrc: ["'self'"]
+        scriptSrc: ["'self'", "'unsafe-inline'", "https:"],
+        styleSrc: ["'self'", "'unsafe-inline'", "https:"],
+        imgSrc: ["'self'", "data:", "https:"],
+        connectSrc: ["'self'", "https:"],
+        fontSrc: ["'self'", "https:", "data:"],
+        objectSrc: ["'none'"],
+        baseUri: ["'self'"],
+        frameAncestors: ["'self'"]
       }
     }
   })
